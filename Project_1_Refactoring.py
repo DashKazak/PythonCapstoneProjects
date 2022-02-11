@@ -24,10 +24,15 @@ def quiz_check(questions, topic, total_score):  # avoid names like 'Dict' which 
 def main():
     total_score = 0  # this is never used here and always 0 - could quiz_check set it?
 
+    # how would you handle more topics? 
     topic = input('Would you like art, or space questions? Enter art for art and space for space:')
 
     if topic == 'art':
-        questions = {'Who painted the Mona Lisa?':'Leonardo Da Vinci','What precious stone is used to make the artist\'s pigment ultramarine?': 'Lapiz lazuli','Anish Kapoor\'s bean-shaped Cloud Gate scuplture is a landmark of which city?': 'Chicago'}
+        questions = {  # can use multiple lines if preferred, can be easier to read 
+            'Who painted the Mona Lisa?': 'Leonardo Da Vinci',
+            'What precious stone is used to make the artist\'s pigment ultramarine?': 'Lapiz lazuli',
+            'Anish Kapoor\'s bean-shaped Cloud Gate scuplture is a landmark of which city?': 'Chicago'
+            }
         #function call
         quiz_check(questions, topic, total_score)  # python convention is to put a space after the comma, it's a little easier to read the individual arguments
         
